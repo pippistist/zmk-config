@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -21,10 +20,10 @@
 
         default_layer {
             bindings = <
-&kp TAB      &kp Q           &kp W           &kp E        &kp R        &kp T          &kp Y       &kp U      &kp I      &kp O    &kp P          &kp SQT
-&lt 1 LCTRL  &kp A           &kp S           &kp D        &kp F        &kp G          &kp H       &kp J      &kp K      &kp L    &kp BACKSLASH
-&kp LSHFT    &kp Z           &kp X           &kp C        &kp V        &kp B          &kp N       &kp M      &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL    &lt 5 LEFT_WIN  &lt 2 LEFT_ALT  &lt 0 SPACE  &lt 4 SPACE  &kp RIGHT_ALT  &lt 8 RGUI  &kp RCTRL
+&kp TAB         &kp Q           &kp W           &kp E        &kp R        &kp T          &kp Y       &kp U      &kp I      &kp O    &kp P      &kp SQT
+&lt 1 CAPSLOCK  &kp A           &kp S           &kp D        &kp F        &kp G          &kp H       &kp J      &kp K      &kp L    &kp SEMI
+&kp LSHFT       &kp Z           &kp X           &kp C        &kp V        &kp B          &kp N       &kp M      &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL       &lt 5 LEFT_WIN  &lt 2 LEFT_ALT  &lt 4 SPACE  &lt 3 SPACE  &kp RIGHT_ALT  &lt 8 RGUI  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -32,46 +31,46 @@
 
         ctrl_layer {
             bindings = <
-&kt LC(Y)  &kt LC(Z)  &kt LC(X)  &kt LC(C)  &kt LC(V)  &trans  &kt PAGE_UP    &kt LC(LEFT)  &kt UP    &kt LC(RIGHT)  &kt DELETE     &kt ESCAPE
-&trans     &trans     &trans     &trans     &trans     &trans  &kt PAGE_DOWN  &kt LEFT      &kt DOWN  &kt RIGHT      &kt BACKSPACE
-&trans     &trans     &trans     &trans     &trans     &trans  &kt HOME       &kp END       &trans    &trans         &trans
+&kp LC(Y)  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &kp PAGE_UP    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp DEL        &kp ESC
+&trans     &kp LC(A)  &kp LC(S)  &trans     &kp LC(F)  &trans  &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT      &kp BACKSPACE
+&trans     &trans     &trans     &trans     &trans     &trans  &kp HOME       &kp END       &trans    &trans         &trans
 &trans     &trans     &trans     &trans     &trans     &trans  &trans         &trans
             >;
         };
 
         alt_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kt LS(PAGE_UP)    &kt LS(LC(LEFT))  &kt LS(UP)    &kt LS(LC(RIGHT))  &trans     &kt BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans  &kt LS(PAGE_DOWN)  &kt LS(LEFT)      &kt LS(DOWN)  &kt LS(RIGHT)      &kt ENTER
-&trans  &trans  &trans  &trans  &trans  &trans  &kt LS(HOME)       &kt LS(END)       &trans        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans             &kt DELETE
+&kp LA(TAB)  &trans  &trans     &trans  &trans  &trans  &kp LS(PAGE_UP)    &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &trans     &kp BACKSPACE
+&trans       &trans  &kp LA(S)  &trans  &trans  &trans  &kp LS(PAGE_DOWN)  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &kp ENTER
+&trans       &trans  &trans     &trans  &trans  &trans  &kp LS(HOME)       &kp LS(END)       &trans        &trans             &trans
+&trans       &trans  &trans     &trans  &trans  &trans  &trans             &kp DEL
             >;
         };
 
         symbol {
             bindings = <
-&kt ESCAPE  &kt LEFT_BRACE        &kt RIGHT_BRACE        &kt LEFT_BRACKET  &kt RIGHT_BRACKET  &kt HASH         &kt PERCENT       &kt PLUS     &kt MINUS  &kt ASTERISK  &kt SLASH   &kt GRAVE
-&kt ENTER   &kt LEFT_PARENTHESIS  &kt RIGHT_PARENTHESIS  &kt CARET         &kt UNDERSCORE     &kt LESS_THAN    &kt GREATER_THAN  &kt EQUAL    &kt COMMA  &kt PERIOD    &kt DOLLAR
-&trans      &trans                &trans                 &kt TILDE         &kt PIPE           &kt EXCLAMATION  &kt AMPERSAND     &kt AT_SIGN  &trans     &trans        &trans
-&trans      &trans                &trans                 &mo 7             &trans             &trans           &trans            &trans
+&kp ESC    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp HASH         &kp PERCENT       &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH      &kp GRAVE
+&kp ENTER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET         &kp UNDERSCORE     &kp LESS_THAN    &kp GREATER_THAN  &kp EQUAL  &kp COMMA  &kp PERIOD    &kp DOLLAR
+&trans     &trans                &trans                 &kp TILDE         &kp PIPE           &kp EXCLAMATION  &kp AMPERSAND     &kp AT     &trans     &trans        &kp BACKSLASH
+&trans     &trans                &trans                 &mo 7             &trans             &trans           &trans            &trans
             >;
         };
 
         number {
             bindings = <
-&kt ESCAPE  &kt NUMBER_1  &kt NUMBER_2  &kt NUMBER_3  &kt NUMBER_4  &kt NUMBER_5  &kt NUMBER_6  &kt NUMBER_7  &kt NUMBER_8  &kt NUMBER_9  &kt NUMBER_0   &kt GRAVE
-&kt ENTER   &trans        &trans        &trans        &trans        &trans        &trans        &kt NUMBER_4  &kt NUMBER_5  &kt NUMBER_6  &kt BACKSPACE
-&trans      &trans        &trans        &trans        &trans        &trans        &kt NUMBER_0  &kt NUMBER_1  &kt NUMBER_2  &kt NUMBER_3  &kt DOT
+&kp ESCAPE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp GRAVE
+&kp ENTER   &trans        &trans        &trans        &trans        &trans        &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp BACKSPACE
+&trans      &trans        &trans        &trans        &trans        &trans        &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD
 &trans      &trans        &trans        &trans        &mo 7         &trans        &trans        &trans
             >;
         };
 
         media {
             bindings = <
-&kt K_MUTE        &kt C_VOLUME_DOWN  &kt C_VOLUME_UP  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &kt LA(F4)
-&kt K_PLAY_PAUSE  &kt C_PREVIOUS     &kt C_NEXT       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans
-&trans            &trans             &trans           &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans
-&trans            &trans             &trans           &trans  &trans  &trans  &trans  &kt LC(LA(DELETE))
+&kp C_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans  &trans  &trans           &trans  &trans     &kp LG(P)  &kp LA(F4)
+&kp C_PAUSE  &kp C_PREV         &kp C_NEXT       &trans  &trans  &trans  &trans  &trans           &trans  &kp LG(L)  &trans
+&trans       &trans             &trans           &trans  &trans  &trans  &trans  &trans           &trans  &trans     &trans
+&trans       &trans             &trans           &trans  &trans  &trans  &trans  &kp LC(LA(DEL))
             >;
         };
 
