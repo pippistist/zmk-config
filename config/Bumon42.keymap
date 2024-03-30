@@ -21,10 +21,10 @@
 
         default_layer {
             bindings = <
-&kp TAB      &kp Q     &kp W           &kp E        &kp R        &kp T          &kp Y       &kp U      &kp I      &kp O    &kp P          &kp SQT
-&lt 1 LCTRL  &kp A     &kp S           &kp D        &kp F        &kp G          &kp H       &kp J      &kp K      &kp L    &kp BACKSLASH
-&kp LSHFT    &kp Z     &kp X           &kp C        &kp V        &kp B          &kp N       &kp M      &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL    &kp LGUI  &lt 2 LEFT_ALT  &lt 0 SPACE  &lt 3 SPACE  &kp RIGHT_ALT  &lt 7 RGUI  &kp RCTRL
+&kp TAB      &kp Q           &kp W           &kp E        &kp R        &kp T          &kp Y       &kp U      &kp I      &kp O    &kp P          &kp SQT
+&lt 1 LCTRL  &kp A           &kp S           &kp D        &kp F        &kp G          &kp H       &kp J      &kp K      &kp L    &kp BACKSLASH
+&kp LSHFT    &kp Z           &kp X           &kp C        &kp V        &kp B          &kp N       &kp M      &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL    &lt 5 LEFT_WIN  &lt 2 LEFT_ALT  &lt 0 SPACE  &lt 4 SPACE  &kp RIGHT_ALT  &lt 8 RGUI  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -41,10 +41,10 @@
 
         alt_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kt LS(PAGE_UP)    &kt LS(LC(LEFT))  &kt LS(UP)    &kt LS(LC(RIGHT))  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kt LS(PAGE_UP)    &kt LS(LC(LEFT))  &kt LS(UP)    &kt LS(LC(RIGHT))  &trans     &kt BACKSPACE
 &trans  &trans  &trans  &trans  &trans  &trans  &kt LS(PAGE_DOWN)  &kt LS(LEFT)      &kt LS(DOWN)  &kt LS(RIGHT)      &kt ENTER
 &trans  &trans  &trans  &trans  &trans  &trans  &kt LS(HOME)       &kt LS(END)       &trans        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans             &kt DELETE
             >;
         };
 
@@ -53,16 +53,25 @@
 &kt ESCAPE  &kt LEFT_BRACE        &kt RIGHT_BRACE        &kt LEFT_BRACKET  &kt RIGHT_BRACKET  &kt HASH         &kt PERCENT       &kt PLUS     &kt MINUS  &kt ASTERISK  &kt SLASH   &kt GRAVE
 &kt ENTER   &kt LEFT_PARENTHESIS  &kt RIGHT_PARENTHESIS  &kt CARET         &kt UNDERSCORE     &kt LESS_THAN    &kt GREATER_THAN  &kt EQUAL    &kt COMMA  &kt PERIOD    &kt DOLLAR
 &trans      &trans                &trans                 &kt TILDE         &kt PIPE           &kt EXCLAMATION  &kt AMPERSAND     &kt AT_SIGN  &trans     &trans        &trans
-&trans      &trans                &trans                 &trans            &trans             &trans           &trans            &trans
+&trans      &trans                &trans                 &mo 7             &trans             &trans           &trans            &trans
             >;
         };
 
         number {
             bindings = <
 &kt ESCAPE  &kt NUMBER_1  &kt NUMBER_2  &kt NUMBER_3  &kt NUMBER_4  &kt NUMBER_5  &kt NUMBER_6  &kt NUMBER_7  &kt NUMBER_8  &kt NUMBER_9  &kt NUMBER_0   &kt GRAVE
-&trans      &trans        &trans        &trans        &trans        &trans        &trans        &kt NUMBER_4  &kt NUMBER_5  &kt NUMBER_6  &kt BACKSPACE
+&kt ENTER   &trans        &trans        &trans        &trans        &trans        &trans        &kt NUMBER_4  &kt NUMBER_5  &kt NUMBER_6  &kt BACKSPACE
 &trans      &trans        &trans        &trans        &trans        &trans        &kt NUMBER_0  &kt NUMBER_1  &kt NUMBER_2  &kt NUMBER_3  &kt DOT
-&trans      &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans      &trans        &trans        &trans        &mo 7         &trans        &trans        &trans
+            >;
+        };
+
+        media {
+            bindings = <
+&kt K_MUTE        &kt C_VOLUME_DOWN  &kt C_VOLUME_UP  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &kt LA(F4)
+&kt K_PLAY_PAUSE  &kt C_PREVIOUS     &kt C_NEXT       &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans
+&trans            &trans             &trans           &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans
+&trans            &trans             &trans           &trans  &trans  &trans  &trans  &kt LC(LA(DELETE))
             >;
         };
 
@@ -71,7 +80,7 @@
 &kp TAB    &kp Q  &kp W           &kp E      &kp R      &kp T     &kp Y       &kp U      &kp I      &kp O    &kp P      &kp BSPC
 &kp LCTRL  &kp A  &kp S           &kp D      &kp F      &kp G     &kp H       &kp J      &kp K      &kp L    &kp ENTER
 &kp LSHFT  &kp Z  &kp X           &kp C      &kp V      &kp B     &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH
-&kp LCTRL  &none  &lt 4 LEFT_ALT  &kp SPACE  &kp SPACE  &kp RALT  &lt 7 RGUI  &kp RCTRL
+&kp LCTRL  &mo 5  &lt 4 LEFT_ALT  &kp SPACE  &kp SPACE  &kp RALT  &lt 8 RGUI  &kp RCTRL
             >;
         };
 
@@ -88,10 +97,10 @@
 
         fn_layer {
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7  &kp F8              &kp F9  &kp F10  &kp F11      &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none   &none               &none   &none    &sys_reset
-&none       &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &none         &none         &none   &none               &none   &none    &bootloader
-&to 0       &to 5         &none         &none         &none         &none         &none   &kt LC(LA(DELETE))
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none   &none   &none   &none    &sys_reset
+&none       &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &none         &none         &none   &none   &none   &none    &bootloader
+&to 0       &to 6         &none         &none         &none         &none         &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
