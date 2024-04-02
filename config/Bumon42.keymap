@@ -40,10 +40,10 @@
 
         alt_layer {
             bindings = <
-&kp LA(TAB)  &trans  &trans     &trans  &trans  &trans  &kp LS(PAGE_UP)    &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &trans     &kp BACKSPACE
-&trans       &trans  &kp LA(S)  &trans  &trans  &trans  &kp LS(PAGE_DOWN)  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &kp ENTER
-&trans       &trans  &trans     &trans  &trans  &trans  &kp LS(HOME)       &kp LS(END)       &trans        &trans             &trans
-&trans       &trans  &trans     &trans  &trans  &trans  &trans             &kp DEL
+&kp LA(TAB)  &trans     &trans     &trans  &trans  &trans  &kp LS(PAGE_UP)    &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &trans     &kp BACKSPACE
+&trans       &kp LA(A)  &kp LA(S)  &trans  &trans  &trans  &kp LS(PAGE_DOWN)  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &kp ENTER
+&trans       &trans     &trans     &trans  &trans  &trans  &kp LS(HOME)       &kp LS(END)       &trans        &trans             &trans
+&trans       &trans     &trans     &trans  &trans  &trans  &trans             &kp DEL
             >;
         };
 
